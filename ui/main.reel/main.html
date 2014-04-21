@@ -23,16 +23,6 @@
                 "isHidden": true
             }
         },
-        "actionEventListener2": {
-            "prototype": "montage/core/event/action-event-listener",
-            "properties": {
-                "action": "showMessage",
-                "handler": {"@": "owner"}
-            },
-            "_dev": {
-                "isHidden": true
-            }
-        },
         "addTaskButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -84,9 +74,9 @@
             },
             "listeners": [
                 {
-                    "type": "click",
+                    "type": "action",
                     "useCapture": false,
-                    "listener": {"@": "actionEventListener2"}
+                    "listener": {"@": "owner"}
                 }
             ]
         },
