@@ -47,10 +47,24 @@
                 "value": {"<-": "@tasksController.organizedContent.filter{!completed}.length"}
             }
         },
+        "badge2": {
+            "prototype": "digit/ui/badge.reel",
+            "properties": {
+                "element": {"#": "badge2"}
+            }
+        },
         "button": {
             "prototype": "digit/ui/button.reel",
             "properties": {
                 "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
+        "button2": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button2"},
                 "enabled": true,
                 "label": "Button"
             }
@@ -116,7 +130,9 @@
         <ul data-montage-id="taskList">
             <li data-montage-id="taskCell">
                 Item
+                <button data-montage-id="button2"></button>
             </li>
+            <output data-montage-id="badge2"></output>
         </ul>
     </div>
 </body>
