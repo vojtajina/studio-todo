@@ -47,6 +47,14 @@
                 "value": {"<-": "@tasksController.organizedContent.filter{!completed}.length"}
             }
         },
+        "button": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "button"},
+                "enabled": true,
+                "label": "Button"
+            }
+        },
         "clearCompletedButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -107,6 +115,7 @@
         <ul data-montage-id="taskList">
             <li data-montage-id="taskCell">
                 Item
+                <button data-montage-id="button"></button>
             </li>
         </ul>
     </div>
