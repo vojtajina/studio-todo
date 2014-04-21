@@ -24,7 +24,7 @@ exports.Main = Component.specialize(/** @lends Main# */ {
         }
     },
     
-    showMessage: {
+    handleShowMessageButtonAction: {
         value: function(evt) {
             alert('Message');
         }
