@@ -23,6 +23,16 @@
                 "isHidden": true
             }
         },
+        "actionEventListener2": {
+            "prototype": "montage/core/event/action-event-listener",
+            "properties": {
+                "action": "showMessage",
+                "handler": {"@": "owner"}
+            },
+            "_dev": {
+                "isHidden": true
+            }
+        },
         "addTaskButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -47,28 +57,6 @@
                 "value": {"<-": "@tasksController.organizedContent.filter{!completed}.length"}
             }
         },
-        "badge2": {
-            "prototype": "digit/ui/badge.reel",
-            "properties": {
-                "element": {"#": "badge2"}
-            }
-        },
-        "button": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "button"},
-                "enabled": true,
-                "label": "Button"
-            }
-        },
-        "button2": {
-            "prototype": "digit/ui/button.reel",
-            "properties": {
-                "element": {"#": "button2"},
-                "enabled": true,
-                "label": "Button"
-            }
-        },
         "clearCompletedButton": {
             "prototype": "digit/ui/button.reel",
             "properties": {
@@ -84,6 +72,21 @@
                     "type": "action",
                     "useCapture": false,
                     "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "showMessageButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "showMessageButton"},
+                "enabled": true,
+                "label": "Show message"
+            },
+            "listeners": [
+                {
+                    "type": "click",
+                    "useCapture": false,
+                    "listener": {"@": "actionEventListener2"}
                 }
             ]
         },
@@ -126,13 +129,11 @@
 
         </output>
         <button data-montage-id="clearCompletedButton"></button>
-        <button data-montage-id="button"></button>
+        <button data-montage-id="showMessageButton"></button>
         <ul data-montage-id="taskList">
             <li data-montage-id="taskCell">
                 Item
-                <button data-montage-id="button2"></button>
             </li>
-            <output data-montage-id="badge2"></output>
         </ul>
     </div>
 </body>
