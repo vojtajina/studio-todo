@@ -22,5 +22,11 @@ exports.Main = Component.specialize(/** @lends Main# */ {
 
             tasksController.deleteEach(completedTasks);
         }
+    },
+    
+    showMessage: {
+        value: function(evt) {
+            alert('Message');
+        }
     }
 });
